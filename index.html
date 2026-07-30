@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eGohm – Gebete, Lesungen und Kalender der Koptisch-Orthodoxen Kirche</title>
+<meta name="description" content="eGohm (eϪⲱⲙ) ist die Liturgie-App der St. Markus Koptisch-Orthodoxe Kirche Frankfurt für die Diözese Süddeutschland: mehrsprachige Gebete (Deutsch, Koptisch, Arabisch), saisonabhängige Hymnen, koptischer Kalender und die Lesungen des Tages – offline auf Web, Android, iOS und macOS.">
+<link rel="canonical" href="https://mamitry.github.io/egohm_app_flutter_new/">
+<link rel="alternate" hreflang="de" href="./">
+<link rel="alternate" hreflang="en" href="./en/">
+<meta name="theme-color" content="#29263f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="eGohm">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="eGohm – Liturgie-App der Koptisch-Orthodoxen Kirche">
+<meta property="og:description" content="Mehrsprachige Gebete, saisonabhängige Hymnen, koptischer Kalender und die Lesungen des Tages – offline, auf allen Geräten.">
+<meta property="og:image" content="assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/app-icon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/app-icon.png">
+<link rel="preload" href="assets/fonts/cormorantgaramond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<!-- Einblend-Animation nur mit JavaScript; ohne JS bleiben alle Blöcke sichtbar. -->
+<script>if('IntersectionObserver' in window)document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="./" aria-label="eGohm – Startseite">eϪⲱⲙ</a>
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <a href="#funktionen">Funktionen</a>
+      <a href="#inhalte">Inhalte</a>
+      <a href="#sprachen">Sprachen</a>
+      <a href="#download">Holen</a>
+      <a href="spenden/">Spenden</a>
+      <span class="lang-switch">
+        <a href="./" aria-current="true" hreflang="de">DE</a>
+        <a href="./en/" hreflang="en">EN</a>
+      </span>
+      <a class="btn btn--primary btn--sm" href="https://app.egohm.de">App öffnen</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= Hero ================= -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="ornament" aria-hidden="true">✧ ✧ ✧ ✧ ✧ ✧</div>
+        <span class="hero-coptic">eϪⲱⲙ</span>
+        <h1>Das ganze Kirchenjahr in einer App</h1>
+        <p>
+          eGohm ist die Gebets- und Liturgie-App der St. Markus Koptisch-Orthodoxe
+          Kirche Frankfurt für die Koptisch-Orthodoxe Diözese Süddeutschland:
+          mehrsprachige Gebetstexte, saisonabhängige Hymnen, der koptische Kalender
+          und die Lesungen des Tages – vollständig offline und auf allen Geräten.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="https://app.egohm.de">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>
+            Im Browser öffnen
+          </a>
+          <a class="btn btn--ghost" href="#download">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 4v11m0 0 4-4m-4 4-4-4"/><path d="M5 19h14"/></svg>
+            App laden
+          </a>
+        </div>
+        <p class="hero-note">
+          Kostenlos im Google Play Store und im App Store · keine Anmeldung · keine
+          Werbung · alle Inhalte sind in der App gespeichert und funktionieren ohne
+          Internet.
+        </p>
+      </div>
+      <div class="hero-visual">
+        <div class="phone">
+          <img src="assets/img/screen-home.webp" width="1000" height="1492"
+               alt="Startseite von eGohm mit liturgischem Tagesdatum, den Lesungen für heute und der Bibliothek.">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Kennzahlen ================= -->
+  <section class="section section--alt" id="inhalte">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Umfangreicher Content</p>
+        <h2>Gewachsene Inhalte statt einzelner Gebete</h2>
+        <p class="lead">
+          Agpeya, Euchologion, Psalmodia, Katameros, Diakonantworten, Doxologien,
+          Weihen, geistliche Lieder – die Bibliothek deckt das liturgische Leben der
+          koptischen Kirche im deutschsprachigen Raum ab.
+        </p>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><b>~1.900</b><span>Gebete und Hymnen</span></div>
+        <div class="stat"><b>160+</b><span>Bücher und Kapitel</span></div>
+        <div class="stat"><b>5</b><span>Textsprachen und Transliterationen</span></div>
+        <div class="stat"><b>40</b><span>Feste im Kirchenjahr</span></div>
+        <div class="stat"><b>11</b><span>Fastenzeiten</span></div>
+        <div class="stat"><b>3</b><span>Bibelübersetzungen</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Funktionen ================= -->
+  <section class="section" id="funktionen">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Funktionen</p>
+        <h2>Was eGohm besonders macht</h2>
+        <p class="lead">
+          eGohm nimmt dem Beten die Suche ab: Die App weiß, welcher liturgische Tag
+          heute ist, und zeigt genau die Gebete, Hymnen und Lesungen, die dazu gehören.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v18M5 7l14 10M19 7 5 17"/></svg></div>
+          <h3>Saison-dynamische Texte</h3>
+          <p>
+            Alle von der Kirchensaison abhängigen Gebete, Hymnen, Fürbitten und
+            Melodien werden automatisch für den aktuellen Tag zusammengestellt –
+            Fastenzeiten, Heilige 50 Tage, Feste, Vorabende und Monatstage inklusive.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+          <h3>Integrierter Kalender</h3>
+          <p>
+            Koptisches und gregorianisches Datum parallel, mit Festen, Fastenzeiten
+            und Saisonangaben. Jedes Datum lässt sich wählen – die ganze App richtet
+            sich danach.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h7v15H4zM13 5h7v15h-7z"/><path d="M11 5v15"/></svg></div>
+          <h3>Lesungen des Tages</h3>
+          <p>
+            Der Katameros für Abendweihrauch, Morgenweihrauch und Heilige Liturgie:
+            Psalmen, Evangelien, Paulus, Katholikon und Praxis – mit Angabe, aus
+            welchem Katameros die Lesung stammt.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h6M14 8h6M14 16h6"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <h3>Liturgien wechseln ohne Buchwechsel</h3>
+          <p>
+            Gebete, die es in mehreren Anaphoren gibt, lassen sich direkt im Text
+            zwischen Hl. Basilius, Hl. Gregorius und Hl. Kyrillos umschalten – ohne
+            das Buch zu verlassen.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="m8.2 10.8 7.6-3.6M8.2 13.2l7.6 3.6"/></svg></div>
+          <h3>Teilen mit einem Tipp</h3>
+          <p>
+            Jedes Gebet, jedes Buch und jede Tageslesung hat einen eigenen Link.
+            Geteilte Links öffnen genau die Stelle – in der App oder im Browser,
+            mit Vorschaubild im Messenger.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h9M4 11h9M4 16h6"/><path d="M16 7l4 5-4 5"/></svg></div>
+          <h3>Mehrsprachig nebeneinander</h3>
+          <p>
+            Deutsch, Koptisch und Arabisch – jeweils mit Transliteration – in frei
+            wählbaren Spalten. So können alle Generationen dieselbe Liturgie
+            mitbeten.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg></div>
+          <h3>Lesemodus für den Beamer</h3>
+          <p>
+            Slide-Show-Modus, Vollbild und stufenlose Schriftgröße: eGohm ist genauso
+            für die Projektion in der Kirche gedacht wie für das Handy in der Hand.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 7v5l4 2"/></svg></div>
+          <h3>Rollen und Namen</h3>
+          <p>
+            Priester, Diakon und Volk sind farbig gekennzeichnet; die Namen von
+            Papst, Bischof und Priester werden automatisch in die Fürbitten
+            eingesetzt.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 19h14a2 2 0 0 0 2-2V9l-7-5-7 5v8a2 2 0 0 0 2 2z"/><path d="M12 19v-6"/></svg></div>
+          <h3>Offline und werbefrei</h3>
+          <p>
+            Alle Texte liegen in der App – kein Konto, keine Tracker, kein Datenverkehr
+            beim Beten. Auch in der Krypta, im Zug oder im Flugzeug.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Detailblöcke ================= -->
+  <section class="section section--alt">
+    <div class="wrap">
+
+      <div class="split reveal">
+        <div class="split-text">
+          <p class="eyebrow">Saison &amp; Kalender</p>
+          <h2>Die App kennt den liturgischen Tag</h2>
+          <p>
+            Koptischer Kalender, Fastenzeiten und das nach koptischer Berechnung
+            bestimmte Osterdatum bilden das Rückgrat von eGohm. Aus dem gewählten
+            Datum ergibt sich die Saison – und daraus, welche Gebete, Hymnen,
+            Melodien und Lesungen angezeigt werden.
+          </p>
+          <ul>
+            <li>Koptisches und gregorianisches Datum in einer Übersicht</li>
+            <li>Feste, Fastenzeiten, Heilige 50 Tage, Vorabende und Monatstage</li>
+            <li>Beliebiges Datum wählen – die ganze App folgt der Auswahl</li>
+            <li>„Heute“-Knopf zurück zum aktuellen Tag</li>
+          </ul>
+        </div>
+        <div class="split-visual">
+          <div class="phone phone--tall">
+            <img src="assets/img/screen-calendar.webp" width="1000" height="2020" loading="lazy"
+                 alt="Kalenderansicht mit koptischen und gregorianischen Daten, Festen und Fastenzeiten.">
+          </div>
+        </div>
+      </div>
+
+      <div class="split split--reverse reveal">
+        <div class="split-text">
+          <p class="eyebrow">Lesungen des Tages</p>
+          <h2>Katameros, aufgeschlagen für heute</h2>
+          <p>
+            Für jeden Gottesdienst des Tages stehen die Lesungen bereit – mit
+            Bibelstellen, vollem Text und Herkunftsangabe. Die deutschen Bibeltexte
+            stammen aus lizenzierten Übersetzungen; Psalmen folgen der
+            Septuaginta-Zählung der koptischen Tradition.
+          </p>
+          <ul>
+            <li>Abendweihrauch, Morgenweihrauch und Heilige Liturgie</li>
+            <li>Psalm, Evangelium, Paulus, Katholikon und Praxis</li>
+            <li>Deutsche Bibelübersetzung frei wählbar</li>
+            <li>Koptisch und arabisch parallel lesbar</li>
+          </ul>
+        </div>
+        <div class="split-visual">
+          <div class="phone phone--tall">
+            <img src="assets/img/screen-reading.webp" width="1000" height="2020" loading="lazy"
+                 alt="Lesungen der Heiligen Liturgie mit deutschem, koptischem und arabischem Text in drei Spalten.">
+          </div>
+        </div>
+      </div>
+
+      <div class="split reveal">
+        <div class="split-text">
+          <p class="eyebrow">Liturgien</p>
+          <h2>Anaphora wechseln – mitten im Gebet</h2>
+          <p>
+            Viele Gebete kommen in den Liturgien des Hl. Basilius, des Hl. Gregorius
+            und des Hl. Kyrillos in unterschiedlichen Fassungen vor. In eGohm genügt
+            ein Tipp auf den Umschalter: Der Text wechselt an genau dieser Stelle,
+            das Buch bleibt geöffnet.
+          </p>
+          <ul>
+            <li>Umschalter direkt im Gebetstext</li>
+            <li>Varianten eines Gebets durchblättern</li>
+            <li>Vereinte oder einzelne Fürbitten – nach Wunsch</li>
+            <li>Rollen (Priester, Diakon, Volk) farbig markiert</li>
+          </ul>
+        </div>
+        <div class="split-visual">
+          <div class="phone phone--tall">
+            <img src="assets/img/screen-basil.webp" width="1000" height="2020" loading="lazy"
+                 alt="Liturgie des Hl. Basilius mit Umschalter zwischen Hl. Basilius, Hl. Gregorius und Hl. Kyrillos.">
+          </div>
+        </div>
+      </div>
+
+      <div class="split split--reverse reveal">
+        <div class="split-text">
+          <p class="eyebrow">Bibliothek</p>
+          <h2>Aufgebaut wie die Bücher im Regal</h2>
+          <p>
+            Die Bibliothek folgt der gewachsenen Struktur der liturgischen Bücher –
+            vom Euchologion mit den drei Anaphoren bis zur Psalmodia mit
+            Doxologien, Psalien und Theotokien. Wer den Weg durch die Bücher kennt,
+            findet sich sofort zurecht.
+          </p>
+          <ul>
+            <li>Agpeya – das Stundengebet mit allen Tageszeiten</li>
+            <li>Euchologion – Weihrauchgebete und die drei Liturgien</li>
+            <li>Psalmodia, Diakonantworten, Doxologien, Weihen</li>
+            <li>Geistliche Lieder und ein Verzeichnis über alle Inhalte</li>
+          </ul>
+        </div>
+        <div class="split-visual">
+          <div class="phone">
+            <img src="assets/img/screen-library.webp" width="1000" height="1275" loading="lazy"
+                 alt="Bibliotheksansicht des Euchologion mit den Büchern der drei Liturgien.">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= Sprachen ================= -->
+  <section class="section" id="sprachen">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Sprachen</p>
+        <h2>Drei Sprachen, fünf Spalten, eine Gemeinde</h2>
+        <p class="lead">
+          Dieselbe Zeile aus der Bitte um Vergebung – so wie eGohm sie nebeneinander
+          anzeigt. Jede Spalte lässt sich einzeln ein- und ausschalten, samt
+          Transliteration für alle, die Koptisch oder Arabisch nicht lesen.
+        </p>
+      </div>
+      <div class="langs reveal">
+        <div class="lang-card">
+          <b>Deutsch</b>
+          <p class="sample">Ich habe gesündigt, vergebt mir, meine Väter und Brüder.</p>
+        </div>
+        <div class="lang-card">
+          <b>Koptisch</b>
+          <p class="sample sample--cop" lang="cop">Ⲁⲓⲉⲣⲛⲟⲃⲓ ϯⲙⲉⲧⲁ̀ⲛⲟⲓⲁ̀ ⲭⲱ ⲛⲏⲓ ⲉ̀ⲃⲟⲗ ⲛⲁⲓⲟϯ ⲛⲉⲙ ⲛⲁⲥ̀ⲛⲏⲟⲩ.</p>
+        </div>
+        <div class="lang-card">
+          <b>Koptisch – Umschrift</b>
+          <p class="sample">Ai-ernowi ti-met-anoia koo nie-i ewol na-joti nem na-esnie-ou.</p>
+        </div>
+        <div class="lang-card">
+          <b>Arabisch</b>
+          <p class="sample sample--ara" lang="ar" dir="rtl">أخطأت يا آبائي وإخوتي سامحوني.</p>
+        </div>
+        <div class="lang-card">
+          <b>Arabisch – Umschrift</b>
+          <p class="sample">25t2t ja 2aba2i ua-e5uati sam7unj.</p>
+        </div>
+      </div>
+      <p class="lead reveal" style="margin-top:2rem">
+        Die Bedienoberfläche selbst gibt es auf Deutsch, Englisch und Arabisch –
+        unabhängig von den gewählten Textsprachen.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= Download ================= -->
+  <section class="section section--dark" id="download">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Holen</p>
+        <h2>Auf jedem Gerät, das in der Kirche dabei ist</h2>
+        <p class="lead">
+          eGohm gibt es im Google Play Store, im App Store und als Web-App im
+          Browser – alles aus einer gemeinsamen Codebasis.
+        </p>
+      </div>
+      <div class="download-grid reveal">
+        <div class="platform">
+          <h3>Android</h3>
+          <p>Für Smartphone und Tablet im Google Play Store – kostenlos und werbefrei.</p>
+          <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=de.kopten.app">Bei Google Play</a>
+        </div>
+        <div class="platform">
+          <h3>iPhone &amp; iPad</h3>
+          <p>Im App Store erhältlich; auf dem Mac läuft dieselbe App über den Browser.</p>
+          <a class="btn btn--primary" href="https://apps.apple.com/us/app/egohm/id6444137697">Im App Store</a>
+        </div>
+        <div class="platform">
+          <h3>Web</h3>
+          <p>Ohne Installation in jedem modernen Browser, auch als Lesezeichen auf dem Startbildschirm.</p>
+          <a class="btn btn--ghost" href="https://app.egohm.de">app.egohm.de</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Spenden-Hinweis ================= -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-bottom:0">
+        <p class="eyebrow">Unterstützen</p>
+        <h2>eGohm bleibt kostenlos</h2>
+        <p class="lead">
+          Keine Werbung, kein Abo, keine Daten. Wer die Weiterentwicklung unterstützen
+          möchte, kann spenden – die Mittel gehen ausschließlich in neue Hardware und
+          KI-Abonnements.
+        </p>
+        <p style="margin-top:1.5rem">
+          <a class="btn btn--primary" href="spenden/" style="color:#2b2418">Spenden</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="wordmark" href="./" style="font-size:1.9rem;color:var(--gold)">eϪⲱⲙ</a>
+        <p style="margin-top:0.8rem">
+          Gebete, Lesungen und Kalender der Koptisch-Orthodoxen Kirche –
+          herausgegeben von der St. Markus Koptisch-Orthodoxe Kirche Frankfurt für die
+          Koptisch-Orthodoxe Diözese Süddeutschland.
+        </p>
+      </div>
+      <div>
+        <h3>App</h3>
+        <ul>
+          <li><a href="https://app.egohm.de">Web-App öffnen</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=de.kopten.app">Google Play Store</a></li>
+          <li><a href="https://apps.apple.com/us/app/egohm/id6444137697">App Store</a></li>
+          <li><a href="#funktionen">Funktionen</a></li>
+          <li><a href="#inhalte">Inhalte</a></li>
+          <li><a href="spenden/">Spenden</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Projekt</h3>
+        <ul>
+          <li><a href="https://github.com/mamitry/egohm_app_flutter_new">Quellcode auf GitHub</a></li>
+          <li><a href="https://copticorthodox.church">Diözese Süddeutschland</a></li>
+          <li><a href="./en/">English version</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Rechtliches</h3>
+        <ul>
+          <li><a href="impressum/">Impressum</a></li>
+          <li><a href="datenschutz/">Datenschutz</a></li>
+          <li>Bibeltexte mit freundlicher Genehmigung der jeweiligen Rechteinhaber</li>
+          <li>Schriften unter der SIL Open Font License</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> St. Markus Koptisch-Orthodoxe Kirche Frankfurt</span>
+      <span>eϪⲱⲙ – „Buch“ auf Koptisch</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

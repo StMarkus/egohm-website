@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eGohm – Prayers, Readings and Calendar of the Coptic Orthodox Church</title>
+<meta name="description" content="eGohm (eϪⲱⲙ) is the liturgy app of St. Mark Coptic Orthodox Church Frankfurt for the Diocese of Southern Germany: multilingual prayers (German, Coptic, Arabic), season-aware hymns, the Coptic calendar and the readings of the day – offline on web, Android, iOS and macOS.">
+<link rel="canonical" href="https://mamitry.github.io/egohm_app_flutter_new/en/">
+<link rel="alternate" hreflang="de" href="../">
+<link rel="alternate" hreflang="en" href="./">
+<meta name="theme-color" content="#29263f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="eGohm">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="eGohm – Liturgy app of the Coptic Orthodox Church">
+<meta property="og:description" content="Multilingual prayers, season-aware hymns, the Coptic calendar and the readings of the day – offline, on every device.">
+<meta property="og:image" content="../assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/app-icon.png" type="image/png">
+<link rel="apple-touch-icon" href="../assets/img/app-icon.png">
+<link rel="preload" href="../assets/fonts/cormorantgaramond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/style.css">
+<!-- Reveal animation only with JavaScript; without JS every block stays visible. -->
+<script>if('IntersectionObserver' in window)document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="./" aria-label="eGohm – home">eϪⲱⲙ</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#features">Features</a>
+      <a href="#content">Content</a>
+      <a href="#languages">Languages</a>
+      <a href="#get">Get it</a>
+      <a href="donate/">Donate</a>
+      <span class="lang-switch">
+        <a href="../" hreflang="de">DE</a>
+        <a href="./" aria-current="true" hreflang="en">EN</a>
+      </span>
+      <a class="btn btn--primary btn--sm" href="https://app.egohm.de">Open app</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= Hero ================= -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="ornament" aria-hidden="true">✧ ✧ ✧ ✧ ✧ ✧</div>
+        <span class="hero-coptic">eϪⲱⲙ</span>
+        <h1>The whole church year in one app</h1>
+        <p>
+          eGohm is the prayer and liturgy app of St. Mark Coptic Orthodox Church
+          Frankfurt, made for the Coptic Orthodox Diocese of Southern Germany:
+          multilingual prayer texts, season-aware hymns, the Coptic calendar and the
+          readings of the day – fully offline, on every device.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="https://app.egohm.de">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>
+            Open in browser
+          </a>
+          <a class="btn btn--ghost" href="#get">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 4v11m0 0 4-4m-4 4-4-4"/><path d="M5 19h14"/></svg>
+            Get the app
+          </a>
+        </div>
+        <p class="hero-note">
+          Free on Google Play and the App Store · no sign-up · no ads · all content
+          ships with the app and works without an internet connection.
+        </p>
+      </div>
+      <div class="hero-visual">
+        <div class="phone">
+          <img src="../assets/img/screen-home.webp" width="1000" height="1492"
+               alt="eGohm home screen with the liturgical date, today's readings and the library.">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Numbers ================= -->
+  <section class="section section--alt" id="content">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Extensive content</p>
+        <h2>A grown library, not a handful of prayers</h2>
+        <p class="lead">
+          Agpeya, Euchologion, Psalmodia, Katameros, deacon responses, doxologies,
+          ordination rites, spiritual songs – the library covers the liturgical life
+          of the Coptic Church in the German-speaking diaspora.
+        </p>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><b>~1,900</b><span>prayers and hymns</span></div>
+        <div class="stat"><b>160+</b><span>books and chapters</span></div>
+        <div class="stat"><b>5</b><span>text languages and transliterations</span></div>
+        <div class="stat"><b>40</b><span>feasts of the church year</span></div>
+        <div class="stat"><b>11</b><span>fasting periods</span></div>
+        <div class="stat"><b>3</b><span>Bible translations</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Features ================= -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Features</p>
+        <h2>What makes eGohm different</h2>
+        <p class="lead">
+          eGohm takes the searching out of praying: the app knows today's liturgical
+          day and shows exactly the prayers, hymns and readings that belong to it.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v18M5 7l14 10M19 7 5 17"/></svg></div>
+          <h3>Season-aware texts</h3>
+          <p>
+            Every prayer, hymn, intercession and tune that depends on the church
+            season is assembled automatically for the current day – fasts, the Holy
+            Fifty Days, feasts, eves and monthly commemorations included.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+          <h3>Built-in calendar</h3>
+          <p>
+            Coptic and Gregorian dates side by side, with feasts, fasting periods and
+            season information. Pick any date – the entire app follows it.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h7v15H4zM13 5h7v15h-7z"/><path d="M11 5v15"/></svg></div>
+          <h3>Readings of the day</h3>
+          <p>
+            The Katameros for Vespers, Matins and the Holy Liturgy: psalms, gospels,
+            Pauline, Catholic and Praxis readings – including which Katameros the
+            reading comes from.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h6M14 8h6M14 16h6"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <h3>Switch liturgies without switching books</h3>
+          <p>
+            Prayers that exist in several anaphoras can be switched between
+            St. Basil, St. Gregory and St. Cyril right inside the text – without
+            leaving the book.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="m8.2 10.8 7.6-3.6M8.2 13.2l7.6 3.6"/></svg></div>
+          <h3>Share with one tap</h3>
+          <p>
+            Every prayer, book and daily reading has its own link. Shared links open
+            exactly that spot – in the app or in the browser, with a preview image in
+            the messenger.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h9M4 11h9M4 16h6"/><path d="M16 7l4 5-4 5"/></svg></div>
+          <h3>Languages side by side</h3>
+          <p>
+            German, Coptic and Arabic – each with transliteration – in columns you
+            choose yourself. Every generation can pray the same liturgy together.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg></div>
+          <h3>Reading mode for the projector</h3>
+          <p>
+            Slide-show mode, full screen and continuous font scaling: eGohm is made
+            for projection in church just as much as for a phone in your hand.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 7v5l4 2"/></svg></div>
+          <h3>Roles and names</h3>
+          <p>
+            Priest, deacon and congregation are colour-coded, and the names of the
+            Pope, the bishop and the priest are inserted into the intercessions
+            automatically.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 19h14a2 2 0 0 0 2-2V9l-7-5-7 5v8a2 2 0 0 0 2 2z"/><path d="M12 19v-6"/></svg></div>
+          <h3>Offline and ad-free</h3>
+          <p>
+            All texts live inside the app – no account, no trackers, no network
+            traffic while you pray. Works in the crypt, on the train and on a plane.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Detail blocks ================= -->
+  <section class="section section--alt">
+    <div class="wrap">
+
+      <div class="split reveal">
+        <div class="split-text">
+          <p class="eyebrow">Season &amp; calendar</p>
+          <h2>The app knows the liturgical day</h2>
+          <p>
+            The Coptic calendar, the fasting periods and Easter calculated the Coptic
+            way form the backbone of eGohm. The selected date determines the season –
+            and the season determines which prayers, hymns, tunes and readings appear.
+          </p>
+          <ul>
+            <li>Coptic and Gregorian dates in one overview</li>
+            <li>Feasts, fasts, the Holy Fifty Days, eves and monthly days</li>
+            <li>Pick any date – the whole app follows your choice</li>
+            <li>“Today” button to jump back to the current day</li>
+          </ul>
+        </div>
+        <div class="split-visual">
+          <div class="phone phone--tall">
+            <img src="../assets/img/screen-calendar.webp" width="1000" height="2020" loading="lazy"
+                 alt="Calendar view with Coptic and Gregorian dates, feasts and fasting periods.">
+          </div>
+        </div>
+      </div>
+
+      <div class="split split--reverse reveal">
+        <div class="split-text">
+          <p class="eyebrow">Readings of the day</p>
+          <h2>The Katameros, opened for today</h2>
+          <p>
+            The readings for every service of the day are ready – with references,
+            full text and provenance. The German Bible texts come from licensed
+            translations; psalms follow the Septuagint numbering of the Coptic
+            tradition.
+          </p>
+          <ul>
+            <li>Vespers, Matins and the Holy Liturgy</li>
+            <li>Psalm, gospel, Pauline, Catholic and Praxis readings</li>
+            <li>Choose your preferred German Bible translation</li>
+            <li>Coptic and Arabic readable in parallel</li>
+          </ul>
+        </div>
+        <div class="split-visual">
+          <div class="phone phone--tall">
+            <img src="../assets/img/screen-reading.webp" width="1000" height="2020" loading="lazy"
+                 alt="Readings of the Holy Liturgy with German, Coptic and Arabic text in three columns.">
+          </div>
+        </div>
+      </div>
+
+      <div class="split reveal">
+        <div class="split-text">
+          <p class="eyebrow">Liturgies</p>
+          <h2>Change the anaphora mid-prayer</h2>
+          <p>
+            Many prayers exist in different versions across the liturgies of
+            St. Basil, St. Gregory and St. Cyril. In eGohm one tap on the switcher is
+            enough: the text changes at exactly that place and the book stays open.
+          </p>
+          <ul>
+            <li>Switcher right inside the prayer text</li>
+            <li>Page through the variants of a prayer</li>
+            <li>Combined or individual intercessions – your choice</li>
+            <li>Roles (priest, deacon, congregation) colour-coded</li>
+          </ul>
+        </div>
+        <div class="split-visual">
+          <div class="phone phone--tall">
+            <img src="../assets/img/screen-basil.webp" width="1000" height="2020" loading="lazy"
+                 alt="Liturgy of St. Basil with a switcher between St. Basil, St. Gregory and St. Cyril.">
+          </div>
+        </div>
+      </div>
+
+      <div class="split split--reverse reveal">
+        <div class="split-text">
+          <p class="eyebrow">Library</p>
+          <h2>Arranged like the books on the shelf</h2>
+          <p>
+            The library follows the grown structure of the liturgical books – from the
+            Euchologion with its three anaphoras to the Psalmodia with doxologies,
+            psalies and theotokias. Anyone who knows the books will feel at home
+            immediately.
+          </p>
+          <ul>
+            <li>Agpeya – the book of hours with all the hours</li>
+            <li>Euchologion – incense prayers and the three liturgies</li>
+            <li>Psalmodia, deacon responses, doxologies, ordination rites</li>
+            <li>Spiritual songs and an index across all content</li>
+          </ul>
+        </div>
+        <div class="split-visual">
+          <div class="phone">
+            <img src="../assets/img/screen-library.webp" width="1000" height="1275" loading="lazy"
+                 alt="Library view of the Euchologion with the books of the three liturgies.">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= Languages ================= -->
+  <section class="section" id="languages">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Languages</p>
+        <h2>Three languages, five columns, one congregation</h2>
+        <p class="lead">
+          The same line from the prayer for forgiveness – the way eGohm shows it side
+          by side. Every column can be switched on or off individually, including
+          transliterations for everyone who does not read Coptic or Arabic.
+        </p>
+      </div>
+      <div class="langs reveal">
+        <div class="lang-card">
+          <b>German</b>
+          <p class="sample" lang="de">Ich habe gesündigt, vergebt mir, meine Väter und Brüder.</p>
+        </div>
+        <div class="lang-card">
+          <b>Coptic</b>
+          <p class="sample sample--cop" lang="cop">Ⲁⲓⲉⲣⲛⲟⲃⲓ ϯⲙⲉⲧⲁ̀ⲛⲟⲓⲁ̀ ⲭⲱ ⲛⲏⲓ ⲉ̀ⲃⲟⲗ ⲛⲁⲓⲟϯ ⲛⲉⲙ ⲛⲁⲥ̀ⲛⲏⲟⲩ.</p>
+        </div>
+        <div class="lang-card">
+          <b>Coptic – transliteration</b>
+          <p class="sample">Ai-ernowi ti-met-anoia koo nie-i ewol na-joti nem na-esnie-ou.</p>
+        </div>
+        <div class="lang-card">
+          <b>Arabic</b>
+          <p class="sample sample--ara" lang="ar" dir="rtl">أخطأت يا آبائي وإخوتي سامحوني.</p>
+        </div>
+        <div class="lang-card">
+          <b>Arabic – transliteration</b>
+          <p class="sample">25t2t ja 2aba2i ua-e5uati sam7unj.</p>
+        </div>
+      </div>
+      <p class="lead reveal" style="margin-top:2rem">
+        The user interface itself is available in German, English and Arabic –
+        independently of the text languages you choose.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= Get it ================= -->
+  <section class="section section--dark" id="get">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Get it</p>
+        <h2>On every device you bring to church</h2>
+        <p class="lead">
+          eGohm is available on Google Play, on the App Store and as a web app in the
+          browser – all from a single codebase.
+        </p>
+      </div>
+      <div class="download-grid reveal">
+        <div class="platform">
+          <h3>Android</h3>
+          <p>For phone and tablet on Google Play – free and ad-free.</p>
+          <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=de.kopten.app">Get it on Google Play</a>
+        </div>
+        <div class="platform">
+          <h3>iPhone &amp; iPad</h3>
+          <p>Available on the App Store; on the Mac the same app runs in the browser.</p>
+          <a class="btn btn--primary" href="https://apps.apple.com/us/app/egohm/id6444137697">Download on the App Store</a>
+        </div>
+        <div class="platform">
+          <h3>Web</h3>
+          <p>No installation needed in any modern browser, and pinnable to your home screen.</p>
+          <a class="btn btn--ghost" href="https://app.egohm.de">app.egohm.de</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Donation teaser ================= -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-bottom:0">
+        <p class="eyebrow">Support</p>
+        <h2>eGohm stays free</h2>
+        <p class="lead">
+          No ads, no subscription, no data collection. If you would like to support the
+          work, you can donate – the money goes exclusively into new hardware and AI
+          subscriptions.
+        </p>
+        <p style="margin-top:1.5rem">
+          <a class="btn btn--primary" href="donate/" style="color:#2b2418">Donate</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="wordmark" href="./" style="font-size:1.9rem;color:var(--gold)">eϪⲱⲙ</a>
+        <p style="margin-top:0.8rem">
+          Prayers, readings and calendar of the Coptic Orthodox Church – published by
+          St. Mark Coptic Orthodox Church Frankfurt for the Coptic Orthodox Diocese of
+          Southern Germany.
+        </p>
+      </div>
+      <div>
+        <h3>App</h3>
+        <ul>
+          <li><a href="https://app.egohm.de">Open the web app</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=de.kopten.app">Google Play Store</a></li>
+          <li><a href="https://apps.apple.com/us/app/egohm/id6444137697">App Store</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#content">Content</a></li>
+          <li><a href="donate/">Donate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <ul>
+          <li><a href="https://github.com/mamitry/egohm_app_flutter_new">Source code on GitHub</a></li>
+          <li><a href="https://copticorthodox.church">Diocese of Southern Germany</a></li>
+          <li><a href="../">Deutsche Version</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="imprint/">Imprint</a></li>
+          <li><a href="privacy/">Privacy</a></li>
+          <li>Bible texts used by kind permission of the rights holders</li>
+          <li>Fonts under the SIL Open Font License</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> St. Mark Coptic Orthodox Church Frankfurt</span>
+      <span>eϪⲱⲙ – Coptic for “book”</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
