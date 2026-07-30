@@ -1,14 +1,28 @@
 # eGohm – Promo-Website
 
-Statische Marketing-Website zur App (`app/`). **Kein Build-Schritt**, kein
+Statische Marketing-Website zur App **eGohm** (eϪⲱⲙ), der Gebets- und
+Liturgie-App der Koptisch-Orthodoxen Kirche. **Kein Build-Schritt**, kein
 JavaScript-Framework: reines HTML/CSS + ein kleines Skript für das Einblenden
-beim Scrollen. Alle Schriften und Bilder liegen im Ordner; die einzigen externen
+beim Scrollen. Alle Schriften und Bilder liegen im Repo; die einzigen externen
 Requests sind Grafik und Zählpixel des PayPal-Knopfes auf der Spendenseite.
 
 Herausgeber ist die **St. Markus Koptisch-Orthodoxe Kirche Frankfurt**, die
 eGohm für die Koptisch-Orthodoxe Diözese Süddeutschland erstellt — diese
 Formulierung steht in jedem Footer und muss bei Änderungen überall gleich
 gepflegt werden.
+
+## Verhältnis zur App
+
+Dieses Repo enthält **nur die Website**. Der Flutter-Code der App und die
+liturgischen Inhalte liegen in einem separaten, privaten Repository
+(`egohm_app_flutter_new`) — es muss privat bleiben, weil dort lizenzierte
+Bibeltexte liegen. Deshalb ist die Website ausgelagert: GitHub Pages setzt für
+private Repos einen bezahlten Plan voraus.
+
+Es gibt keine technische Abhängigkeit in Richtung App-Repo: die Schriften sind
+eigene woff2-Subsets, die Screenshots werden von der laufenden Web-App
+(`https://app.egohm.de`) aufgenommen. Änderungen an der App wirken also nur
+dann auf die Website, wenn hier Texte oder Screenshots nachgezogen werden.
 
 ## Struktur
 
@@ -17,7 +31,7 @@ Jede Unterseite liegt als `<pfad>/index.html`, damit die URLs ohne
 `/foo/`).
 
 ```
-website/
+.
 ├── index.html                 # deutsche Startseite
 ├── spenden/index.html         # Spendenseite mit PayPal-Knopf
 ├── danke/index.html           # Bestätigung nach der Spende (noindex)
@@ -30,11 +44,11 @@ website/
 │   ├── imprint/index.html
 │   └── privacy/index.html
 ├── robots.txt
-├── .nojekyll                  # Pages soll den Ordner nicht durch Jekyll schicken
+├── .nojekyll                  # Pages soll den Inhalt nicht durch Jekyll schicken
 └── assets/
     ├── css/style.css          # komplettes Styling, Palette = EgohmPalette der App
     ├── js/main.js
-    ├── fonts/                 # woff2-Subsets aus assets/fonts (SIL OFL)
+    ├── fonts/                 # woff2-Subsets der App-Schriften (SIL OFL)
     └── img/                   # App-Screenshots (webp), Icon, OG-Bild
 ```
 
@@ -49,7 +63,6 @@ Die App ist veröffentlicht; die Links stehen in beiden Startseiten (Download-
 Sektion + Footer) und in den Footern aller Unterseiten:
 
 - Google Play: `https://play.google.com/store/apps/details?id=de.kopten.app`
-  (`applicationId` aus `app/android/app/build.gradle.kts`)
 - App Store: `https://apps.apple.com/us/app/egohm/id6444137697`
 - Web-App: `https://app.egohm.de`
 
@@ -70,24 +83,28 @@ weiter bei PayPal.
 
 ## Farben und Schriften
 
-Die Palette in `assets/css/style.css` (`:root`) spiegelt
-`app/lib/core/theme/flutter_flex_theme.dart` (`EgohmPalette`):
-Braun `#483C30`, Tinte `#29263F`, Gold `#DEB98E`, Akzent `#A0522D`.
-Ein Dark Mode greift automatisch über `prefers-color-scheme`.
+Die Palette in `assets/css/style.css` (`:root`) spiegelt die Klasse
+`EgohmPalette` aus dem App-Theme (`app/lib/core/theme/flutter_flex_theme.dart`
+im App-Repo): Braun `#483C30`, Tinte `#29263F`, Gold `#DEB98E`, Akzent
+`#A0522D`. Ein Dark Mode greift automatisch über `prefers-color-scheme`.
 
-Schriften sind Subsets der in der App gebündelten Fonts:
+Schriften sind Subsets der in der App gebündelten Fonts (Quelle: `assets/fonts/`
+im App-Repo):
 
-| Datei | Herkunft | Verwendung |
+| Datei hier | Quelle im App-Repo | Verwendung |
 | --- | --- | --- |
-| `cormorantgaramond-latin.woff2` | `assets/fonts/cormorantgaramond.ttf` | Überschriften |
-| `archivonarrow-latin.woff2` | `assets/fonts/archivonarrow-regular.ttf` | Lauftext |
-| `egohm-coptic.woff2` | `assets/fonts/eGohmCopticUnicode-Regular.ttf` | Wortmarke, koptische Beispiele |
+| `assets/fonts/cormorantgaramond-latin.woff2` | `cormorantgaramond.ttf` | Überschriften |
+| `assets/fonts/archivonarrow-latin.woff2` | `archivonarrow-regular.ttf` | Lauftext |
+| `assets/fonts/egohm-coptic.woff2` | `eGohmCopticUnicode-Regular.ttf` | Wortmarke, koptische Beispiele |
 
-Neu erzeugen (benötigt `fonttools` + `brotli`):
+Neu erzeugen (benötigt `fonttools` + `brotli`), aus dem App-Repo heraus:
 
 ```bash
-pyftsubset assets/fonts/cormorantgaramond.ttf --output-file=website/assets/fonts/cormorantgaramond-latin.woff2 --flavor=woff2 --unicodes="U+0000-00FF,U+2018-201E,U+2026" --layout-features="kern,liga"
+pyftsubset assets/fonts/cormorantgaramond.ttf --output-file=../egohm-website/assets/fonts/cormorantgaramond-latin.woff2 --flavor=woff2 --unicodes="U+0000-00FF,U+2018-201E,U+2026" --layout-features="kern,liga"
 ```
+
+Die koptische Schrift wird nicht gesubsettet, sondern nur nach woff2 komprimiert
+(`TTFont(...); f.flavor='woff2'; f.save(...)`).
 
 ## Screenshots aktualisieren
 
@@ -109,22 +126,35 @@ Danach unten den leeren Bereich abschneiden und als webp speichern
 ## Lokal ansehen
 
 ```bash
-python3 -m http.server 8080 --directory website
+python3 -m http.server 8087
 ```
+
+Danach `http://localhost:8087/` öffnen. Achtung beim Prüfen mit
+Headless-Chrome: Blöcke mit der Klasse `reveal` werden erst beim Scrollen
+eingeblendet — nach 2,5 s entfernt `main.js` die Klasse `js` und alles ist
+sichtbar. Ohne JavaScript ist ohnehin alles sichtbar.
 
 ## Deployment
 
-`.github/workflows/deploy-website.yml` lädt den Ordner bei jedem Push auf
-`main`, der `website/**` berührt, als Pages-Artefakt hoch
-(`actions/upload-pages-artifact` → `actions/deploy-pages`). Einmalig muss in
-den Repository-Einstellungen unter *Pages* als Quelle **GitHub Actions**
-gewählt werden.
+`.github/workflows/deploy-website.yml` lädt das Repo-Wurzelverzeichnis bei jedem
+Push auf `main` als Pages-Artefakt hoch (`actions/upload-pages-artifact` →
+`actions/deploy-pages`). Einmalig muss in den Repository-Einstellungen unter
+*Pages* als Quelle **GitHub Actions** gewählt werden.
 
-Für eine eigene Domain: `website/CNAME` mit der Domain anlegen (eine Zeile,
-z. B. `www.egohm.de`) und den DNS-Eintrag beim Provider setzen — für eine
-`www`-Domain ein CNAME auf `mamitry.github.io`, für die Apex-Domain die vier
-A-Records von GitHub Pages. Die App selbst bleibt unter `app.egohm.de`
-(Firebase Hosting, eigener Workflow).
+**Solange dieses Repo privat ist, funktioniert GitHub Pages nicht** — Pages für
+private Repositories setzt einen bezahlten Plan voraus (bei Organisationen
+GitHub Team). Erst nach dem Umschalten auf *public* (oder mit Team-Plan) läuft
+der Deploy durch.
+
+Ohne eigene Domain liegt die Seite unter
+`https://stmarkus.github.io/egohm-website/` — darauf zeigen derzeit die
+`canonical`-Angaben der beiden Startseiten.
+
+Für eine eigene Domain: `CNAME` im Wurzelverzeichnis mit der Domain anlegen
+(eine Zeile, z. B. `www.egohm.de`) und den DNS-Eintrag beim Provider setzen —
+für eine `www`-Domain ein CNAME auf `stmarkus.github.io`, für die Apex-Domain
+die vier A-Records von GitHub Pages. Die App selbst bleibt unter `app.egohm.de`
+(Firebase Hosting, Workflow im App-Repo).
 
 ## Offen
 
@@ -137,5 +167,7 @@ A-Records von GitHub Pages. Die App selbst bleibt unter `app.egohm.de`
   `spenden/` und `en/donate/`.
 - Return-URL des PayPal-Knopfes im PayPal-Konto auf `/danke/` setzen
   (siehe oben).
-- `link rel="canonical"` in beiden Startseiten zeigt auf die github.io-Adresse;
-  nach dem Domain-Umzug anpassen.
+- Repo auf *public* schalten, damit Pages deployen kann.
+- Der Footer-Link „Website auf GitHub“ zeigt auf dieses Repo und greift erst,
+  wenn es öffentlich ist.
+- `canonical`-Angaben nach dem Domain-Umzug anpassen.

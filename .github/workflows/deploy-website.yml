@@ -1,14 +1,15 @@
 name: Deploy Website to GitHub Pages
 
-# Statische Promo-Website aus `website/` — kein Build-Schritt, der Ordner wird
-# unverändert als Pages-Artefakt hochgeladen.
+# Statische Promo-Website im Repo-Wurzelverzeichnis — kein Build-Schritt, der
+# Inhalt wird unverändert als Pages-Artefakt hochgeladen.
+#
+# Hinweis: GitHub Pages funktioniert bei privaten Repositories nur mit einem
+# bezahlten Plan. Solange dieses Repo privat ist, lässt sich Pages nicht
+# aktivieren und der Deploy-Schritt schlägt fehl.
 on:
   push:
     branches:
       - main
-    paths:
-      - '**'
-      - '.github/workflows/deploy-website.yml'
   workflow_dispatch:
 
 # `pages: write` + `id-token: write` sind für actions/deploy-pages Pflicht.
@@ -38,13 +39,14 @@ jobs:
         uses: actions/configure-pages@v5
 
       # Jekyll überspringen (Ordner/Dateien mit `_` würden sonst ignoriert).
+      # `.nojekyll` ist eingecheckt; `touch` stellt sie nur sicher.
       - name: Disable Jekyll processing
-        run: touch website/.nojekyll
+        run: touch .nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: website
+          path: .
 
       - name: Deploy to GitHub Pages
         id: deployment
