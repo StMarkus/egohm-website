@@ -2,10 +2,6 @@ name: Deploy Website to GitHub Pages
 
 # Statische Promo-Website im Repo-Wurzelverzeichnis — kein Build-Schritt, der
 # Inhalt wird unverändert als Pages-Artefakt hochgeladen.
-#
-# Hinweis: GitHub Pages funktioniert bei privaten Repositories nur mit einem
-# bezahlten Plan. Solange dieses Repo privat ist, lässt sich Pages nicht
-# aktivieren und der Deploy-Schritt schlägt fehl.
 on:
   push:
     branches:
