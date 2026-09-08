@@ -49,7 +49,7 @@ Jede Unterseite liegt als `<pfad>/index.html`, damit die URLs ohne
     ├── css/style.css          # komplettes Styling, Palette = EgohmPalette der App
     ├── js/main.js
     ├── fonts/                 # woff2-Subsets der App-Schriften (SIL OFL)
-    └── img/                   # App-Screenshots (webp), Icon, OG-Bild
+    └── img/                   # App-Screenshots (webp), Bildmarke, Icon, OG-Bild
 ```
 
 Sprachpaare sind über `<link rel="alternate" hreflang>` und den DE/EN-Umschalter
@@ -105,6 +105,53 @@ pyftsubset assets/fonts/cormorantgaramond.ttf --output-file=../egohm-website/ass
 
 Die koptische Schrift wird nicht gesubsettet, sondern nur nach woff2 komprimiert
 (`TTFont(...); f.flavor='woff2'; f.save(...)`).
+
+## Slogan
+
+Der App-Slogan steht an drei Stellen und muss bei Änderungen überall gleich
+gepflegt werden:
+
+| Ort | Vorkommen |
+| --- | --- |
+| Hero-Überschrift der Startseiten (`h1.hero-claim`) | `index.html`, `en/index.html` |
+| Fußzeile jeder Seite (`p.footer-claim`) | alle 10 Seiten |
+| `og:description` der Startseiten, dem bestehenden Satz vorangestellt | `index.html`, `en/index.html` |
+
+| | Wortlaut |
+| --- | --- |
+| Deutsch | Alles, was die Kirche betet und singt. Immer dabei. |
+| Englisch | Everything the Church prays and sings. Always with you. |
+
+Im Hero steht **jeder Satz in einem eigenen `<span>`** — die sind per CSS
+`display: block`, damit die Zeile an der Satzgrenze umbricht und nicht ein
+einzelnes Wort allein stehen bleibt. Beim Ändern des Textes diese Struktur
+beibehalten.
+
+Die frühere Überschrift „Das ganze Kirchenjahr in einer App" steht jetzt als
+`.eyebrow` über dem Slogan, damit die Keywords im Hero erhalten bleiben.
+`<title>` und `meta description` sind unverändert.
+
+## Bildmarke
+
+Die Bildmarke (Kreuz aus vier aufgeschlagenen Buchseiten) kommt aus der Ablage
+des Designers im App-Repo (`new-logo/app-icon/`, Variante „B3 Invertiert · bis
+zum Rand"). Sie ist randlos angelegt, die Kreuzarme laufen also bis an die
+Bildkante.
+
+| Datei hier | Quelle | Verwendung |
+| --- | --- | --- |
+| `assets/img/logo-light.png` | `new-logo/app-icon/ios/logo_hi_light.png`, auf 256 px verkleinert | Marke in Creme auf den dunklen Flächen: Kopfzeile, Hero-Lockup, Fußzeile |
+| `assets/img/app-icon.png` | `new-logo/app-icon/ios/logo_hi_navy.png` | Favicon und `apple-touch-icon` |
+| `assets/img/logo-mail.png` | `new-logo/app-icon/mail/egohm-logo-mail.png`, unverändert | **nicht** von der Website verlinkt |
+
+`logo-mail.png` (192 × 192, Navy auf Weiß, ohne Alpha) liegt nur hier, damit
+E-Mail-Signaturen die Marke unter der festen Adresse
+`https://egohm.de/assets/img/logo-mail.png` einbinden können. Der Pfad ist
+Bestandteil verschickter Signaturen: Datei nicht umbenennen und nicht
+verschieben.
+
+In Kopf- und Fußzeile steckt die Marke im `.wordmark`-Link, im Hero im
+`.hero-lockup`; alle drei Größen kommen aus `assets/css/style.css`.
 
 ## Screenshots aktualisieren
 
