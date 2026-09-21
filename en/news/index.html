@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What&rsquo;s new – eGohm</title>
+<meta name="description" content="What has changed in eGohm from version to version.">
+<link rel="alternate" hreflang="de" href="../../neuigkeiten/">
+<link rel="alternate" hreflang="en" href="./">
+<meta name="theme-color" content="#29263f">
+<link rel="icon" href="../../assets/img/app-icon.png" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/img/app-icon.png">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="../" aria-label="eGohm – home"><img src="../../assets/img/logo-light.png" width="256" height="256" alt="">eϪⲱⲙ</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../#features">Features</a>
+      <a href="../#content">Content</a>
+      <a href="./">What&rsquo;s new</a>
+      <a href="../donate/">Donate</a>
+      <span class="lang-switch">
+        <a href="../../neuigkeiten/" hreflang="de">DE</a>
+        <a href="./" aria-current="true" hreflang="en">EN</a>
+      </span>
+      <a class="btn btn--primary btn--sm" href="https://app.egohm.de">Open app</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">The app</p>
+      <h1>What&rsquo;s new</h1>
+      <p>
+        What has changed from version to version &ndash; the same notes the app
+        shows you after an update.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap prose">
+        <!-- Inhalt erzeugt von scripts/publish_release_notes.py im App-Repo. -->
+        <!-- RELEASE-NOTES:START -->
+        <h2>eGohm 1.5.1</h2>
+        <h3>Choosing a date in the Coptic calendar</h3>
+        <ul>
+          <li>"Choose a date…" in the church-year overview now opens its own dialog with a toggle between the Coptic and the Gregorian calendar – before, you only got your device's ordinary calendar.</li>
+          <li>In the Coptic view the Coptic day stands large in the cell with the Gregorian one small below it, carrying a short month name at the turn of the month ("1 Oct"). Both calendars are readable at a glance, without switching.</li>
+          <li>The header shows the chosen day in both calendars before you confirm it with OK.</li>
+          <li>The small months are there too: the five or six days of Nasie appear as a month of their own in the grid.</li>
+          <li>In Arabic the grid runs right to left.</li>
+        </ul>
+        <h3>Start of the week as a setting</h3>
+        <ul>
+          <li>New under Settings → Calendar: does the week start on Sunday or on Monday? Your device's language used to decide; now you do – the choice applies to the date dialog.</li>
+        </ul>
+        <h3>Feedback with several images</h3>
+        <ul>
+          <li>A report can now carry several images instead of just one. "Capture another screen" sets the current image aside together with your drawing, text and address and closes the form; you go to the next place, capture it, and find everything from before waiting for you. A bar offers "Continue" in the meantime.</li>
+          <li>"Pick an image" attaches existing photos or screenshots instead – the form stays open while you do.</li>
+          <li>Each image has a remove button, "Discard draft" clears everything, and a report holds at most five images. In the history they appear side by side as a strip.</li>
+        </ul>
+        <h3>Fixed</h3>
+        <ul>
+          <li>The very first report after a launch failed with "not available", because sending outran the connection being established; only the second try went through. Sending now waits for it, and opening the form starts it early.</li>
+          <li>In the date dialog the height jumped while paging when a month fitted into five weeks (or Nasie into one). The grid now keeps the same height in every month.</li>
+        </ul>
+        <h2>eGohm 1.5.0</h2>
+        <h3>The Synaxarion</h3>
+        <ul>
+          <li>The book of the saints is here – 180 days from Thoout to Meshir: for every day of the Coptic calendar the commemorations of the saints, martyrs and fathers and the feasts of the Church, plus two introductory chapters.</li>
+          <li>In the Liturgy it sits where it belongs: after the Acts, before the Psalm and the Gospel – with the announcement of the day, "Today is the … day of the blessed month of …". The day is fetched automatically, like any other reading.</li>
+          <li>Scripture references and notes do not interrupt your reading: they sit behind a small icon and open at the bottom of the screen on tap.</li>
+          <li>Every commemoration closes with its blessing, and every day with "Glory be to our Lord for ever. Amen."</li>
+          <li>The months from Paremhat to Nesi will follow in one of the next updates.</li>
+        </ul>
+        <h3>Feedback that answers back</h3>
+        <ul>
+          <li>Until now you could write but never hear back. The team now replies, the answer appears under "My feedback" – with a badge when something new arrives – and you can write straight back.</li>
+          <li>A report can carry a screenshot you may draw on beforehand and, optionally, an e-mail address for follow-up questions. Without one everything stays anonymous, but the history is no longer reachable after a reinstall.</li>
+          <li>"Report this problem" now sits where the problem is; whatever you had open is sent along as context.</li>
+          <li>Fixed: "Report a problem" from the side menu failed every time on the phone.</li>
+        </ul>
+        <h3>Arabic interface right to left</h3>
+        <ul>
+          <li>With the app set to Arabic, the whole interface is now mirrored – side menu, cards, icons and images.</li>
+          <li>On first launch the interface language follows your device: an Arabic or German device language decides directly, otherwise the country does (Egypt → Arabic, DE/AT/CH → German), and everything else gets English. After that your own choice wins.</li>
+        </ul>
+        <h3>The day display leads somewhere</h3>
+        <ul>
+          <li>On the home screen and in the side menu every part of the day has its own destination: the name and image of the feast or fasting season lead to its directory entry, "Eve" and "Fast" each to an explanation, the date and the empty space to the calendar as before.</li>
+          <li>"Eve" and "Fasting season" have their own pages with a share button; the note about the switch-over time links straight to the setting it talks about.</li>
+          <li>Second days of feasts and the Coptic New Year period now point to the entry of their feast instead of ending in a "there is no page for this".</li>
+        </ul>
+        <h3>Reading</h3>
+        <ul>
+          <li>The display switch (the eye) now also offers the reading languages on pages carrying a psalm or a reading. Before, turning Coptic off there changed nothing – the switch looked broken.</li>
+          <li>Readings now default to German and Arabic: those are the two languages they are proclaimed in, and on a phone a fourth column gets tight. Prayers keep all three columns, and one tap brings Coptic back. Existing installations are moved over once – only if the reading languages were never changed by hand.</li>
+          <li>Doxologies: a button in the text jumps to the conclusion, and a "Back" button at the end returns you to where you came from.</li>
+        </ul>
+        <h3>New and completed texts</h3>
+        <ul>
+          <li>New book "Praise Hymns (Madayih)" with the hymns for Neyrouz and the Feast of the Cross.</li>
+          <li>Agpeya: Coptic intercessions added for several hours, and the psalms of each hour grouped into their own section.</li>
+          <li>Added: the missing verse of the Neyrouz doxology and further verses, the missing verse (17) of the Sunday Theotokia, and further variants of "Lord, have mercy".</li>
+          <li>Text corrections from the review: "Hades" instead of "hell", "Lord Jesus" in the refrains, and a set of spelling and wording fixes.</li>
+        </ul>
+        <h3>Privacy</h3>
+        <ul>
+          <li>A new "Privacy" section in the settings holds the "Anonymous usage statistics" switch: all that is counted is how often the app is opened – by platform, version and country. What you read or pray is not recorded, no advertising identifiers are used, and on the web it works without a cookie. One tap turns it off, with the link to the privacy policy next to it.</li>
+        </ul>
+        <h2>eGohm 1.4.0</h2>
+        <h3>Larger type</h3>
+        <ul>
+          <li>Font size now goes up to 600% instead of 180% – for anyone who needs the text much larger. The slider snaps to steps: fine ten-point steps in the everyday range, coarser further up.</li>
+          <li>The starting size follows your screen: on tablet and desktop the text begins larger than on the phone. You can change it at any time.</li>
+          <li>The slide show no longer cuts text off: if a single paragraph no longer fits on one page at a very large size, that page becomes scrollable for once – by wheel, swipe or the up/down arrow keys. Left/right still turn the page.</li>
+          <li>The "−" and "+" buttons in the font-size menu were invisible against the light menu surface and are back in view.</li>
+        </ul>
+        <h3>Baptism and Chrismation</h3>
+        <ul>
+          <li>The rite is complete: the consecration of the baptismal water with "Meet and right", "Holy, holy, holy" and the psalm verses, the baptism itself, the sealing with the holy Myron, the breathing of the Holy Spirit, the communion of the newly baptised and the prayer before draining the water.</li>
+          <li>Alongside the exhortation to parents and godparents there is now an exhortation for adults.</li>
+          <li>The blessings and the pouring of the Galilaion oil have been reordered, and the sequence of the Chrismation rite corrected.</li>
+        </ul>
+        <h3>More new and completed texts</h3>
+        <ul>
+          <li>Agpeya: the 2nd and 3rd Watch of the Midnight Prayer were empty apart from the introduction – they are now complete.</li>
+          <li>The commemoration of the departed carries the list of former patriarchs again.</li>
+          <li>The communion prayers before and the thanksgiving after have been revised and missing paragraphs added; the Liturgy of St Basil now has its own "Conclusion" section.</li>
+          <li>"Communion Hymns" is now called "Distribution Hymns".</li>
+          <li>Added deacon responses: "Let those who are seated stand", "Look towards the East", "We hear" and the response for the Pope.</li>
+          <li>The text and the refrain of "Our Saviour invited us" have been corrected.</li>
+          <li>Aspasmos Adam and the verses for Theophany have been added.</li>
+          <li>Many prayer titles are shorter – without the leading article.</li>
+        </ul>
+        <h3>The three incense hymns</h3>
+        <ul>
+          <li>"Ti Shouri", "Tai Shouri" and "Entho te ti Shouri" now sit side by side: the hymn that applies to the day is preselected, the other two stay available to look up. Each one says when it is sung.</li>
+          <li>They have been added for the Fast of Nineveh.</li>
+        </ul>
+        <h3>Text quality</h3>
+        <ul>
+          <li>The Coptic transliteration now follows a fixed rule set based on the diocese's teaching text ("Maren-ohsh, level 1"). Ⲃ, Ⲅ, Ⲇ, Ⲑ, Ⲩ, Ⲭ and Ϫ are now rendered according to their surroundings – 19,376 lines in 986 files were brought in line, among them the Saturday Psali.</li>
+          <li>The punctuation of the transliterations now matches the Coptic and Arabic source text (1,417 lines).</li>
+          <li>The liturgy switcher labels its three variants on one line again and scrolls sideways when they do not fit next to each other.</li>
+        </ul>
+        <h2>eGohm 1.3.0</h2>
+        <h3>New and completed texts</h3>
+        <ul>
+          <li>Agpeya: the missing parts of the 1st Watch of the Midnight Prayer have been added, as has the Midnight Doxology.</li>
+          <li>The prayer before and after Holy Communion is now included.</li>
+          <li>The doxologies are now introduced by "Through Christ Jesus …".</li>
+          <li>The hymn "Ti Shouri" appears again before the Hiteniat.</li>
+          <li>"Make us worthy …" now precedes the Lord's Prayer.</li>
+          <li>The Gospel responses now follow the liturgical season.</li>
+          <li>Psalmody, Theotokias and Tasbeha have been revised and completed; the doxologies are set antiphonally throughout, so the parts are easy to follow.</li>
+        </ul>
+        <h3>Bishops and clergy</h3>
+        <ul>
+          <li>In the Hiteniat, attending diocesan bishops are now commemorated according to your settings.</li>
+          <li>New setting "Metropolitans present as well" for the collective form without names.</li>
+          <li>The commemoration of the Pope has been corrected: Anba, "II." and "Patriarch" are back in place.</li>
+          <li>"Archdeacon" is now used consistently.</li>
+        </ul>
+        <h3>Handling</h3>
+        <ul>
+          <li>The main menu can now also be opened with a swipe from the left edge of the screen – the edge strip is wider and works in reading mode too, without accidentally turning the page.</li>
+          <li>Long sections such as "Ordinations of Deacons" start collapsed and can be opened when needed; the same applies to links to other prayers and books.</li>
+        </ul>
+        <h3>Shared links</h3>
+        <ul>
+          <li>Shared links to app.egohm.de now open straight in the app.</li>
+          <li>Opened in a browser, they show a discreet hint about the app.</li>
+        </ul>
+        <h3>Text quality</h3>
+        <ul>
+          <li>Many corrections to spelling, punctuation and line breaks as well as to Coptic spellings and the Arabic transliteration – among them "twelve Apostles" instead of "twelve disciples", "Saint Athanasius", and a consistent rendering of the "Amen".</li>
+          <li>In the Marriage rite, the German and Arabic lines line up correctly again.</li>
+        </ul>
+        <!-- RELEASE-NOTES:END -->
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="wordmark" href="../"><img src="../../assets/img/logo-light.png" width="256" height="256" alt="">eϪⲱⲙ</a>
+        <p class="footer-claim">Everything the Church prays and sings. Always with you.</p>
+        <p style="margin-top:0.8rem">
+          Prayers, readings and calendar of the Coptic Orthodox Church – published by
+          St. Mark Coptic Orthodox Church Frankfurt e.V. for the Coptic Orthodox Diocese of
+          Southern Germany.
+        </p>
+      </div>
+      <div>
+        <h3>App</h3>
+        <ul>
+          <li><a href="https://app.egohm.de">Open the web app</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=de.kopten.app">Google Play Store</a></li>
+          <li><a href="https://apps.apple.com/us/app/egohm/id6444137697">App Store</a></li>
+          <li><a href="../#features">Features</a></li>
+          <li><a href="../#content">Content</a></li>
+          <li><a href="./">What&rsquo;s new</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Project</h3>
+        <ul>
+          <li><a href="https://copticorthodox.church">Diocese of Southern Germany</a></li>
+          <li><a href="../../neuigkeiten/">Deutsche Version</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="../imprint/">Imprint</a></li>
+          <li><a href="../privacy/">Privacy</a></li>
+          <li><a href="../donate/">Donate</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> St. Mark Coptic Orthodox Church Frankfurt e.V.</span>
+      <span>eϪⲱⲙ – Coptic for “book”</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Neuigkeiten – eGohm</title>
+    <meta
+      name="description"
+      content="Was sich in eGohm von Fassung zu Fassung geändert hat."
+    />
+    <link rel="alternate" hreflang="de" href="../neuigkeiten/" />
+    <link rel="alternate" hreflang="en" href="../en/news/" />
+    <meta name="theme-color" content="#29263f" />
+    <link rel="icon" href="../assets/img/app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../assets/img/app-icon.png" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="wordmark" href="../" aria-label="eGohm – Startseite"><img src="../assets/img/logo-light.png" width="256" height="256" alt="">eϪⲱⲙ</a>
+        <nav class="site-nav" aria-label="Hauptnavigation">
+          <a href="../#funktionen">Funktionen</a>
+          <a href="../#inhalte">Inhalte</a>
+          <a href="./">Neuigkeiten</a>
+          <a href="../spenden/">Spenden</a>
+          <span class="lang-switch">
+            <a href="./" aria-current="true" hreflang="de">DE</a>
+            <a href="../en/news/" hreflang="en">EN</a>
+          </span>
+          <a class="btn btn--primary btn--sm" href="https://app.egohm.de"
+            >App öffnen</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="wrap">
+          <p class="eyebrow">Die App</p>
+          <h1>Neuigkeiten</h1>
+          <p>Was sich von Fassung zu Fassung geändert hat – dieselben Hinweise, die dir die App nach einem Update zeigt.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap prose">
+        <!-- Inhalt erzeugt von scripts/publish_release_notes.py im App-Repo. -->
+        <!-- RELEASE-NOTES:START -->
+        <h2>eGohm 1.5.1</h2>
+        <h3>Datum wählen im koptischen Kalender</h3>
+        <ul>
+          <li>„Datum wählen…" in der Kirchenjahr-Übersicht öffnet jetzt einen eigenen Dialog mit einem Umschalter zwischen koptischem und gregorianischem Kalender – vorher gab es nur den gewöhnlichen Kalender des Geräts.</li>
+          <li>In der koptischen Ansicht steht der koptische Tag groß in der Zelle, der gregorianische klein darunter; beim Monatswechsel mit Kürzel („1. Okt."). So siehst du beide Kalender auf einen Blick, ohne umzuschalten.</li>
+          <li>Der Kopf zeigt den gewählten Tag in beiden Kalendern, bevor du ihn mit OK bestätigst.</li>
+          <li>Auch die kleinen Monate sind dabei: die fünf bzw. sechs Tage der Nasie stehen als eigener Monat im Raster.</li>
+          <li>Auf Arabisch läuft das Raster von rechts nach links.</li>
+        </ul>
+        <h3>Wochenbeginn als Einstellung</h3>
+        <ul>
+          <li>Neu unter Einstellungen → Kalender: Beginnt die Woche am Sonntag oder am Montag? Bisher entschied das die Sprache deines Geräts, jetzt entscheidest du – die Wahl gilt für den Datums-Dialog.</li>
+        </ul>
+        <h3>Rückmeldungen mit mehreren Bildern</h3>
+        <ul>
+          <li>Eine Meldung kann jetzt mehrere Bilder tragen statt nur eines. „Weiteren Bildschirm aufnehmen" legt das aufgenommene Bild samt Zeichnung, Text und Adresse beiseite und schließt das Formular; du gehst zur nächsten Stelle, nimmst sie auf und findest alles Bisherige wieder. Eine Hinweisleiste bietet währenddessen „Fortsetzen" an.</li>
+          <li>„Bild aus der Galerie" hängt stattdessen vorhandene Fotos oder Bildschirmfotos an – das Formular bleibt dabei offen.</li>
+          <li>Je Bild ein Entfernen-Knopf, „Entwurf verwerfen" leert alles; höchstens fünf Bilder pro Meldung. Im Verlauf stehen die Bilder als Streifen nebeneinander.</li>
+        </ul>
+        <h3>Behoben</h3>
+        <ul>
+          <li>Die allererste Rückmeldung nach dem Start scheiterte mit „nicht verfügbar", weil der Versand schneller war als der Verbindungsaufbau; erst der zweite Versuch ging durch. Jetzt wartet das Senden darauf, und das Öffnen des Formulars stößt den Aufbau schon an.</li>
+          <li>Im Datums-Dialog sprang die Höhe beim Blättern, wenn ein Monat mit fünf Wochen auskam (oder die Nasie mit einer). Das Raster hält jetzt in jedem Monat dieselbe Höhe.</li>
+        </ul>
+        <h2>eGohm 1.5.0</h2>
+        <h3>Das Synaxarium</h3>
+        <ul>
+          <li>Das Buch der Heiligen ist da – 180 Tage von Thoout bis Meschir: zu jedem Tag des koptischen Kalenders die Gedenktage der Heiligen, Märtyrer und Väter und die Feste der Kirche, dazu zwei einführende Kapitel.</li>
+          <li>In der Liturgie steht es an seinem Platz: nach der Apostelgeschichte, vor Psalm und Evangelium – mit der Tagesansage „Heute ist der … Tag des gesegneten Monats …". Der Tag wird automatisch geholt, wie jede andere Lesung.</li>
+          <li>Bibelstellen und Anmerkungen unterbrechen den Lesefluss nicht: Sie stehen hinter einem kleinen Symbol und öffnen sich auf Antippen unten am Bildschirm.</li>
+          <li>Jeder Eintrag schließt mit seiner Segensformel, jeder Tag mit „Ehre sei unserem Herrn in Ewigkeit. Amen."</li>
+          <li>Die Monate Paremhat bis Nesi folgen in einem der nächsten Updates.</li>
+        </ul>
+        <h3>Rückmeldungen mit Antwort</h3>
+        <ul>
+          <li>Bisher konntest du schreiben, aber nichts hören. Jetzt antwortet das Team, die Antwort erscheint unter „Meine Rückmeldungen" – mit Abzeichen, wenn etwas Neues da ist – und du kannst direkt zurückschreiben.</li>
+          <li>Dazu ein Screenshot, auf den du vorher zeichnen kannst, und freiwillig eine E-Mail für Rückfragen. Ohne sie bleibt alles anonym; nach einer Neuinstallation ist der Verlauf dann aber nicht mehr erreichbar.</li>
+          <li>„Diesen Fehler melden" sitzt jetzt an der Fehlerstelle selbst; was du offen hattest, geht als Zusatzangabe mit.</li>
+          <li>Behoben: „Fehler melden" aus dem Seitenmenü scheiterte auf dem Telefon jedes Mal.</li>
+        </ul>
+        <h3>Arabische Oberfläche von rechts nach links</h3>
+        <ul>
+          <li>Auf Arabisch ist jetzt die ganze Oberfläche gespiegelt – Seitenmenü, Karten, Symbole und Bilder.</li>
+          <li>Beim ersten Start richtet sich die Oberflächensprache nach deinem Gerät: arabische oder deutsche Gerätesprache entscheidet direkt, sonst das Land (Ägypten → Arabisch, D/A/CH → Deutsch), im Übrigen Englisch. Danach gilt deine eigene Wahl.</li>
+        </ul>
+        <h3>Die Tagesanzeige führt weiter</h3>
+        <ul>
+          <li>Auf der Startseite und im Seitenmenü hat jede Angabe ihr eigenes Ziel: Name und Bild der Fest- oder Fastenzeit führen zu ihrem Verzeichnis-Eintrag, „Vorabend" und „Fasten" zu je einer Erklärung, Datum und freie Fläche wie gehabt zum Kalender.</li>
+          <li>„Vorabend" und „Fastenzeit" haben eigene Seiten mit Teilen-Knopf; der Hinweis auf die Umschaltzeit führt mit einem Tap zu der Einstellung, um die es geht.</li>
+          <li>Zweite Festtage und die koptische Neujahrsperiode verweisen jetzt auf den Eintrag ihres Festes, statt in einem „hierzu gibt es keine Seite" zu enden.</li>
+        </ul>
+        <h3>Lesen</h3>
+        <ul>
+          <li>Der Anzeige-Schalter (Auge) bietet auf Seiten mit Psalm oder Lesung jetzt auch die Lesungssprachen an. Vorher änderte sich dort beim Abwählen von Koptisch nichts – der Schalter wirkte kaputt.</li>
+          <li>Lesungen stehen ab Werk auf Deutsch und Arabisch; in diesen beiden wird vorgetragen, und auf dem Telefon wird es ab der vierten Spalte eng. Die Gebete bleiben dreispaltig, und Koptisch ist mit einem Tap wieder da. Bestehende Installationen ziehen einmalig nach – nur, wenn die Lesungssprachen nie selbst geändert wurden.</li>
+          <li>Doxologien: ein Knopf im Text springt zum Abschluss, ein „Zurück" am Ende führt wieder dorthin, wo du hergekommen bist.</li>
+        </ul>
+        <h3>Neue und ergänzte Texte</h3>
+        <ul>
+          <li>Neues Buch „Loblieder (Madayih)" mit den Lobliedern zu Neyrouz und zum Kreuzfest.</li>
+          <li>Agpeya: koptische Fürbitten für mehrere Gebetszeiten ergänzt, die Psalmen jeder Stunde zu einem eigenen Abschnitt gruppiert.</li>
+          <li>Ergänzt: die fehlende Strophe der Neyrouz-Doxologie samt weiterer Verse, die fehlende Strophe (17) der Sonntags-Theotokie und weitere Fassungen von „Herr, erbarme Dich".</li>
+          <li>Textkorrekturen aus der Durchsicht: „Hades" statt „Hölle", „Herr Jesus" in den Kehrversen, „des Paradieses" und eine Reihe von Wort- und Zeichenkorrekturen.</li>
+        </ul>
+        <h3>Datenschutz</h3>
+        <ul>
+          <li>Neuer Bereich „Datenschutz" in den Einstellungen mit dem Schalter „Anonyme Nutzungsstatistik": Gezählt wird nur, wie oft die App geöffnet wird – nach Plattform, Version und Land. Was du liest oder betest, wird nicht erfasst, Werbe-Kennungen werden nicht verwendet, im Web geht es ohne Cookie. Abschalten mit einem Tap, daneben der Link zur Datenschutzerklärung.</li>
+        </ul>
+        <h2>eGohm 1.4.0</h2>
+        <h3>Größere Schrift</h3>
+        <ul>
+          <li>Die Schriftgröße geht jetzt bis 600 % statt bis 180 % – für alle, die den Text deutlich größer brauchen. Der Regler rastet dabei in Stufen: im Alltagsbereich fein in Zehnerschritten, oben gröber.</li>
+          <li>Die Startgröße richtet sich nach deinem Bildschirm: auf Tablet und Desktop beginnt der Text größer als auf dem Telefon. Ändern kannst du sie jederzeit.</li>
+          <li>In der Slide-Show wird kein Text mehr abgeschnitten: Passt ein einzelner Absatz bei sehr großer Schrift nicht mehr auf eine Seite, lässt sich diese Seite ausnahmsweise scrollen – mit Rad, Wischen oder den Pfeiltasten hoch/runter. Geblättert wird weiter mit links/rechts.</li>
+          <li>Die Knöpfe „−" und „+" im Schriftgrößen-Menü waren auf der hellen Menüfläche unsichtbar und sind jetzt wieder zu sehen.</li>
+        </ul>
+        <h3>Taufe und Myronsalbung</h3>
+        <ul>
+          <li>Der Ritus ist vollständig: die Weihe des Taufwassers mit „Würdig und recht", „Heilig, heilig, heilig" und den Psalmversen, die Taufe selbst, die Besiegelung mit dem heiligen Myron, das Hauchen des Heiligen Geistes, die Kommunion der Getauften und das Gebet vor dem Ablassen des Wassers.</li>
+          <li>Neben der Ermahnung an die Eltern und Paten gibt es jetzt auch eine Ermahnung an Erwachsene.</li>
+          <li>Die Segnungen und das Gießen des Galiläonöls sind neu geordnet, die Reihenfolge im Ritus der Myronsalbung korrigiert.</li>
+        </ul>
+        <h3>Weitere neue und ergänzte Texte</h3>
+        <ul>
+          <li>Agpeya: Die 2. und die 3. Andacht des Mitternachtsgebets waren bis auf die Einleitung leer – jetzt sind sie vollständig.</li>
+          <li>Beim Gedächtnis der Entschlafenen steht wieder die Liste der früheren Patriarchen.</li>
+          <li>Die Kommunionsgebete davor und die Danksagung danach sind durchgesehen, fehlende Absätze ergänzt; die Basilius-Liturgie hat jetzt einen eigenen Abschnitt „Abschluss".</li>
+          <li>„Kommunionhymnen" heißt jetzt „Hymnen zur Austeilung".</li>
+          <li>Ergänzte Diakonantworten: „Wer sitzt, stehe auf", „Schaut nach Osten", „Wir hören" und die Antwort zum Papst.</li>
+          <li>Bei „Unser Erlöser lud uns ein" sind Text und Kehrvers korrigiert.</li>
+          <li>Zur Theophanie sind Aspasmus Adam und die Verse ergänzt.</li>
+          <li>Viele Gebetstitel sind gestrafft – ohne den führenden Artikel.</li>
+        </ul>
+        <h3>Die drei Weihrauch-Hymnen</h3>
+        <ul>
+          <li>„Ti Schuri", „Tai Schuri" und „Entho te ti Schuri" stehen jetzt nebeneinander: Die Hymne, die für den Tag gilt, ist vorausgewählt, die beiden anderen bleiben zum Nachschlagen erreichbar. Dazu steht bei jeder, wann sie gesungen wird.</li>
+          <li>In der Ninive-Fastenzeit sind sie ergänzt.</li>
+        </ul>
+        <h3>Textqualität</h3>
+        <ul>
+          <li>Die koptische Umschrift folgt jetzt einem festen Regelwerk nach dem Lehrtext der Diözese („Maren-ohsch, Stufe 1"). Damit sprechen sich Ⲃ, Ⲅ, Ⲇ, Ⲑ, Ⲩ, Ⲭ und Ϫ je nach Nachbarschaft richtig aus – 19.376 Zeilen in 986 Dateien wurden nachgezogen, unter anderem in der Samstags-Psalie.</li>
+          <li>Die Satzzeichen der Umschriften sind an den koptischen und arabischen Ausgangstext angeglichen (1.417 Zeilen).</li>
+          <li>Der Liturgie-Umschalter beschriftet seine drei Fassungen wieder einzeilig und scrollt zur Seite, wenn sie nicht nebeneinander passen.</li>
+          <li>Wortkorrektur: „des Paradieses" statt „des Paradies".</li>
+        </ul>
+        <h2>eGohm 1.3.0</h2>
+        <h3>Neue und ergänzte Texte</h3>
+        <ul>
+          <li>Agpeya: die fehlenden Teile der 1. Andacht des Mitternachtsgebets sind ergänzt, ebenso die Mitternachts-Doxologie.</li>
+          <li>Das Gebet vor und nach der heiligen Kommunion ist neu dabei.</li>
+          <li>Vor den Doxologien steht jetzt die Einleitung „Durch Christus Jesus …".</li>
+          <li>Die Hymne „Ti Schuri" erscheint wieder vor den Hiteniat.</li>
+          <li>Vor dem Vaterunser steht „Mache uns würdig …".</li>
+          <li>Die Evangeliumsantworten richten sich jetzt nach der liturgischen Jahreszeit.</li>
+          <li>Psalmodie, Theotokien und Tasbeha wurden durchgesehen und ergänzt; die Doxologien sind einheitlich im Wechselgesang gesetzt, sodass die Rollen erkennbar sind.</li>
+        </ul>
+        <h3>Bischöfe und Klerus</h3>
+        <ul>
+          <li>Bei den Hiteniat werden anwesende Diözesanbischöfe jetzt entsprechend der Einstellung erwähnt.</li>
+          <li>Neue Einstellung „Auch Metropoliten anwesend" für die Sammelformel ohne Namen.</li>
+          <li>Die Nennung des Papstes ist korrigiert: Anba, „II." und „Patriarch" stehen wieder richtig.</li>
+          <li>Einheitlich „Erzdiakon" statt „Archidiakon".</li>
+        </ul>
+        <h3>Bedienung</h3>
+        <ul>
+          <li>Das Hauptmenü lässt sich jetzt auch mit einem Wisch vom linken Bildschirmrand öffnen – der Randstreifen ist breiter und funktioniert auch im Lesemodus, ohne dass versehentlich die Seite umblättert.</li>
+          <li>Lange Abschnitte wie „Weihen der Diakone" starten eingeklappt und lassen sich bei Bedarf öffnen; das gilt auch für Verweise auf andere Gebete und Bücher.</li>
+        </ul>
+        <h3>Geteilte Links</h3>
+        <ul>
+          <li>Geteilte Links auf app.egohm.de öffnen sich direkt in der App.</li>
+          <li>Wer sie im Browser öffnet, bekommt einen dezenten Hinweis auf die App.</li>
+        </ul>
+        <h3>Textqualität</h3>
+        <ul>
+          <li>Viele Korrekturen an Rechtschreibung, Zeichensetzung und Zeilenumbrüchen sowie an koptischen Schreibweisen und der arabischen Umschrift – unter anderem „zwölf Apostel" statt „zwölf Jünger", „der heilige Athanasius" und eine einheitliche Darstellung des „Amen".</li>
+          <li>Bei der Eheschließung stehen die deutschen und arabischen Zeilen wieder korrekt nebeneinander.</li>
+        </ul>
+        <!-- RELEASE-NOTES:END -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <a
+              class="wordmark"
+              href="../"
+              ><img src="../assets/img/logo-light.png" width="256" height="256" alt="">eϪⲱⲙ</a
+            >
+            <p class="footer-claim">Alles, was die Kirche betet und singt. Immer dabei.</p>
+            <p style="margin-top: 0.8rem">
+              Gebete, Lesungen und Kalender der Koptisch-Orthodoxen Kirche –
+              herausgegeben von der St. Markus Koptisch-Orthodoxe Kirche
+              Frankfurt e.V. für die Koptisch-Orthodoxe Diözese Süddeutschland.
+            </p>
+          </div>
+          <div>
+            <h3>App</h3>
+            <ul>
+              <li><a href="https://app.egohm.de">Web-App öffnen</a></li>
+              <li>
+                <a
+                  href="https://play.google.com/store/apps/details?id=de.kopten.app"
+                  >Google Play Store</a
+                >
+              </li>
+              <li>
+                <a href="https://apps.apple.com/us/app/egohm/id6444137697"
+                  >App Store</a
+                >
+              </li>
+              <li><a href="../#funktionen">Funktionen</a></li>
+              <li><a href="../#inhalte">Inhalte</a></li>
+              <li><a href="./">Neuigkeiten</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Projekt</h3>
+            <ul>
+              <li>
+                <a href="https://copticorthodox.church"
+                  >Diözese Süddeutschland</a
+                >
+              </li>
+              <li><a href="../en/news/">English version</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Rechtliches</h3>
+            <ul>
+              <li><a href="../impressum/">Impressum</a></li>
+              <li><a href="../datenschutz/">Datenschutz</a></li>
+              <li><a href="../spenden/">Spenden</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span
+            >© <span data-year>2026</span> St. Markus Koptisch-Orthodoxe Kirche
+            Frankfurt e.V.</span
+          >
+          <span>eϪⲱⲙ – „Buch“ auf Koptisch</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>
