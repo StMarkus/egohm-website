@@ -48,6 +48,73 @@
     <div class="wrap prose">
         <!-- Inhalt erzeugt von scripts/publish_release_notes.py im App-Repo. -->
         <!-- RELEASE-NOTES:START -->
+        <h2>eGohm 1.6.0</h2>
+        <h3>German Bible Translations</h3>
+        <ul>
+          <li>NT reading texts now offer two German versions: the Einheitsübersetzung 1980 (EU 1980) and the Schlachter 2000 (SLT). The Psalms continue to come from the Septuagint (LXX). You can switch anytime — in Settings (Languages &gt; German Bible Translation) and in the display menu — the eye icon above the reading.</li>
+          <li>Bible references are now clearer and consistent, and the abbreviation shown depends on the selected translation.</li>
+          <li>The Psalm title follows the selected translation. Previously it carried both numberings at once ("Psalm 11 [LXX] / Psalm 12"), even though only one ever applies.</li>
+          <li>Bible references are now available in all three languages: "Ps 64:12", "مزمور 64: 12", and Ⲯⲁⲗⲙⲟⲥ ⲝ̅ⲇ̅: ⲓ̅ⲃ̅</li>
+          <li>The "Bible Translations" page states the origin, description, and rights for each version.</li>
+          <li>Readings are more complete: 447 readings had no Coptic text at all. Now 99% of New Testament readings include it, verse by verse alongside the German and Arabic.</li>
+        </ul>
+        <h3>Coptic:</h3>
+        <ul>
+          <li>Coptic abbreviations for frequently used words (nomina sacra – Ⲓⲏ̅ⲥ̅, Ⲡⲭ̅ⲥ̅, Ⲡⲟ̅ⲥ̅, Ⲫϯ): these date back to a time when papyrus and parchment were expensive and these particular words appeared dozens of times per page. On screen, that reason no longer applies. For easier readability and accessibility, the full form reads more easily, and the transliteration pronounces it fully anyway. The abbreviations have therefore been converted to their full form.</li>
+          <li>Ordinal numbers are likewise spelled out in full (ⲡⲓⲙⲁϩ ⲥ̀ⲛⲁⲩ instead of ⲡⲓⲙⲁϩⲃ̅).</li>
+        </ul>
+        <h3>Feast of the Cross</h3>
+        <ul>
+          <li>New in the Morning Incense for the Feast of the Cross and the Finding of the Cross: the Cross Procession as its own book with all twelve stations.</li>
+          <li>Each station includes its Gospel prayer, its Psalm, its Gospel reading, and its Gospel response — from the main altar past the icons of the Virgin Mary, the Archangels Gabriel and Michael, the Apostle Mark, the disciples, the martyrs, and the saints, up to the icon of John the Baptist. The Hymn of Constantine frames the procession.</li>
+          <li>Above each station it shows where you are: "Station 3" with "Before the icon of the Archangel Gabriel" beneath it, along with the icon itself. Section headings can now carry a second line and an image for this purpose.</li>
+          <li>Also included: background on the feast — the story of Queen Helena and the finding of the Cross.</li>
+        </ul>
+        <h3>Coptic Calendar</h3>
+        <ul>
+          <li>The "Choose Date…" dialog now has a toggle between the Coptic and Gregorian calendars.</li>
+          <li>In the Coptic view, the Coptic day appears large in the cell with the Gregorian date small underneath; at a month change, with an abbreviation ("Oct 1"). This lets you see both calendars at a glance without switching.</li>
+          <li>The header shows the selected day in both calendars before you confirm it with OK.</li>
+          <li>In Arabic, the grid runs right to left.</li>
+          <li>New under Settings → Calendar: does the week start on Sunday or Monday? Previously this was decided by your device's language; now you decide.</li>
+        </ul>
+        <h3>Home, Library, and Reading View</h3>
+        <ul>
+          <li>The home screen arranges its cards based on window width; cards sitting side by side are now the same height.</li>
+          <li>The "today" card finally has its heading: "Liturgical Day."</li>
+          <li>On large screens, the margin grows instead of the content — on both the home screen and the library — so the two align on the same edge.</li>
+          <li>In the reading view, by contrast, the gap between language columns grows with the window; on phones everything stays as it was.</li>
+          <li>On Android, content no longer sits under the system navigation bar.</li>
+        </ul>
+        <h3>Doxologies</h3>
+        <ul>
+          <li>The doxologies of the Holy Virgin Mary in the Evening and Morning Incense, as well as at midnight, used to all appear one after another. Now only the correct one for that moment appears.</li>
+        </ul>
+        <h3>Roles and Books</h3>
+        <ul>
+          <li>Priest, bishop, reader, congregation, etc. now have their own icons instead of generic symbols.</li>
+          <li>Books whose texts are still in progress say so themselves: an "In Progress" banner on the tile and a note on the book's page. This affects Ordinations, Pascha, Anointing of the Sick, Marriage, and Priesthood.</li>
+        </ul>
+        <h3>Feedback</h3>
+        <ul>
+          <li>The form is new and guides you through four steps: message, images, contact address, review and send. A row of dots shows where you are, and the arrow takes you back.</li>
+          <li>A report can now carry multiple images instead of just one. "Record screen" sets the text and address aside, steps away briefly, and afterward you'll find everything as it was; "Choose from gallery" attaches existing photos without closing the form. Each image has its own remove button, up to five per report.</li>
+          <li>Fixed: the very first feedback submission after launch used to fail with "unavailable" because sending happened faster than the connection could be established; only the second attempt would go through.</li>
+        </ul>
+        <h3>Small Improvements</h3>
+        <ul>
+          <li>After an update, the app shows "What's New" once — everything added since your previous version. Fresh installs don't see this.</li>
+          <li>Synaxarium: the blessing formula now reads "May the blessing of their prayers be with us" instead of "their intercessions."</li>
+        </ul>
+        <h3>Bug Fixes</h3>
+        <ul>
+          <li>Fixed: the date dialog's height used to jump while scrolling when a month had five weeks (or Nasie had one).</li>
+          <li>Fixed: the transliteration of the Arabic "ترح" was incorrect; it now reads "tar7."</li>
+          <li>Each reading now appears only once in the database instead of in up to three copies, and its reference only once instead of twice — saving space and loading faster.</li>
+          <li>Fixed: 97 instances where the Arabic or Coptic column carried the text of a different verse — almost all in readings spanning two chapters, where the same verse number occurs twice. In Acts 18:28, the following verse 19:1 appeared a second time in Coptic; it has been removed.</li>
+          <li>Fixed: at the end of some Psalms, the Hallelujah appeared twice — once in the text, once appended by the app.</li>
+          <li>Fixed: a mix-up identified and corrected: in Matthew 20:5, the ninth hour had become the sixth.</li>
+        </ul>
         <h2>eGohm 1.5.1</h2>
         <h3>Choosing a date in the Coptic calendar</h3>
         <ul>
